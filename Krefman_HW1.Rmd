@@ -9,11 +9,12 @@ Table 1:
 
 ```{r, echo=FALSE}
 hw1data <- read.csv("~/Dropbox/School/Winter 2015/Consulting/hw1data.csv")
-catVars <- c("group", "sex", "race")
-myVars <- c("group", "sex", "race", "age", "weight", "height")
+
 library(tableone)
-tab3 <- CreateTableOne(vars = myVars, strata = "group" , data = hw1data, factorVars = catVars)
-tab3
+nogroup <- c("sex", "race", "age", "weight", "height")
+nogroupCat <- c("sex", "race")
+ 
+tab4 <- CreateTableOne(vars = nogroup, strata = "group" , data = hw1data, factorVars = nogroupCat)
+print(tab4, showAllLevels = TRUE))
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

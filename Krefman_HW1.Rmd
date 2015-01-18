@@ -16,7 +16,12 @@ summary(cars)
 You can also embed plots, for example:
 
 ```{r, echo=FALSE}
-plot(cars)
+hw1data <- read.csv("~/Dropbox/School/Winter 2015/Consulting/hw1data.csv")
+catVars <- c("group", "sex", "race")
+myVars <- c("group", "sex", "race", "age", "weight", "height")
+library(tableone)
+tab3 <- CreateTableOne(vars = myVars, strata = "group" , data = hw1data, factorVars = catVars)
+tab3
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

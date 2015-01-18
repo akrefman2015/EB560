@@ -7,14 +7,14 @@ output: html_document
 
 Table 1:
 
-```{r, echo=FALSE}
-hw1data <- read.csv("~/Dropbox/School/Winter 2015/Consulting/hw1data.csv")
+```{r, echo=FALSE, message=FALSE}
+hw1data <- read.csv("/Users/amykrefman/Krefman/hw1data.csv")
 
 library(tableone)
 nogroup <- c("sex", "race", "age", "weight", "height")
 nogroupCat <- c("sex", "race")
  
-tab4 <- CreateTableOne(vars = nogroup, strata = "group" , data = hw1data, factorVars = nogroupCat)
-print(tab4, showAllLevels = TRUE))
+tab4 <- CreateTableOne(vars = nogroup, strata = "group", data = hw1data, factorVars = nogroupCat)
+print(tab4, showAllLevels = TRUE)
 ```
 

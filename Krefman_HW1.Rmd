@@ -7,7 +7,7 @@ output: html_document
 
 Table 1:
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 hw1data <- read.csv("/Users/amykrefman/Krefman/hw1data.csv")
 
 library(tableone)

@@ -1,5 +1,5 @@
 ---
-title: "Krefman_HW1"
+title: "Homework 1"
 author: "Amy Krefman"
 date: "January 18, 2015"
 output: html_document
@@ -17,4 +17,5 @@ nogroupCat <- c("sex", "race")
 tab4 <- CreateTableOne(vars = nogroup, strata = "group", data = hw1data, factorVars = nogroupCat)
 print(tab4, showAllLevels = TRUE)
 ```
+
 

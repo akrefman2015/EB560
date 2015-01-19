@@ -24,4 +24,5 @@ tab4 <- CreateTableOne(vars = nogroup, strata = "group", data = hw1data, factorV
 print(tab4, showAllLevels = TRUE)
 ```
 
+Note: This .rmd file is published on gitHub under akrefman2015 / EB560.
 

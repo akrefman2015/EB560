@@ -7,7 +7,7 @@ output: html_document
 
 Table 1:
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
 hw1data <- read.csv("/Users/amykrefman/Krefman/hw1data.csv")
 
 library(tableone)
@@ -18,4 +18,13 @@ tab4 <- CreateTableOne(vars = nogroup, strata = "group", data = hw1data, factorV
 print(tab4, showAllLevels = TRUE)
 ```
 
+```{r}
+library(knitr)
+library(pander)
+kable(head(hw1data),'html')
+```
+
+```{r  render=pander, results='asis'}
+pandoc.table(tab4)
+```
 

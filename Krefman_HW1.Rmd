@@ -5,6 +5,12 @@ date: "January 18, 2015"
 output: html_document
 ---
 
+```{r, echo=FALSE}
+#installing appropriate packages
+if("tableone" %in% rownames(installed.packages()) == FALSE) {install.packages("tableone")}
+```
+
+
 Table 1:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
@@ -18,13 +24,4 @@ tab4 <- CreateTableOne(vars = nogroup, strata = "group", data = hw1data, factorV
 print(tab4, showAllLevels = TRUE)
 ```
 
-```{r}
-library(knitr)
-library(pander)
-kable(head(hw1data),'html')
-```
-
-```{r  render=pander, results='asis'}
-pandoc.table(tab4)
-```
 

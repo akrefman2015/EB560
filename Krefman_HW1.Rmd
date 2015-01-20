@@ -11,7 +11,7 @@ if("tableone" %in% rownames(installed.packages()) == FALSE) {install.packages("t
 ```
 <hr>
 <hr>
-Table 1.
+Table 1. Summary of descriptive variables by group.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, comment=NA}
 hw1data <- read.csv("/Users/amykrefman/Krefman/hw1data.csv")
